@@ -11,4 +11,46 @@
 // "white" in every pixel;
 // the screen should remain fully clear as long as no key is pressed.
 
-// Put your code here.
+
+@KBD
+D=M
+@23
+D;JNE
+@6
+D;JEQ
+
+@i
+M=0
+@i
+D=M
+@8192
+D=A-D 
+@0
+D;JEQ
+@i
+D=M
+@SCREEN
+A=D+A
+M=0 
+@i 
+M=M+1
+@8
+0;JMP
+
+@i
+M=0
+@i
+D=M
+@8192
+D=A-D 
+@0
+D;JEQ
+@i
+D=M
+@SCREEN
+A=D+A
+M=-1
+@i 
+M=M+1
+@25
+0;JMP
